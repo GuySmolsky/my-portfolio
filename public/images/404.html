@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guy Smolsky - Portfolio</title>
+    <script>
+      // Redirect to the main app with the current path
+      const path = window.location.pathname.replace("/my-portfolio", "");
+      const search = window.location.search;
+      const hash = window.location.hash;
+
+      // Redirect to the HashRouter format
+      window.location.replace("/my-portfolio/#" + path + search + hash);
+    </script>
+  </head>
+  <body>
+    <div id="root">
+      <div
+        style="
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          font-family: 'Orbitron', monospace;
+          background: linear-gradient(
+            135deg,
+            #0a0a0a 0%,
+            #1a1a2e 50%,
+            #16213e 100%
+          );
+          color: #00ffff;
+        "
+      >
+        <h1>Redirecting...</h1>
+      </div>
+    </div>
+  </body>
+</html>
