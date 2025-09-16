@@ -1,11 +1,17 @@
 // src/data/projects.js
 
+// Helper function to get correct image paths for both development and production
+const getImagePath = (imagePath) => {
+  const basePath = import.meta.env.DEV ? "" : "/my-portfolio";
+  return `${basePath}${imagePath}`;
+};
+
 export const projectsData = {
   htmlcss: [
     {
       id: 1,
       title: "Project 1",
-      image: "/images/html project images/projectOnePhoto.png",
+      image: getImagePath("/images/html project images/projectOnePhoto.png"),
       technologies: ["HTML", "CSS"],
       liveUrl:
         "https://guysmolsky.github.io/HtmlCssProjects/projects/project%201/",
@@ -15,7 +21,7 @@ export const projectsData = {
     {
       id: 2,
       title: "Project 2",
-      image: "/images/html project images/projectTwoPhoto.png",
+      image: getImagePath("/images/html project images/projectTwoPhoto.png"),
       technologies: ["HTML", "CSS"],
       liveUrl:
         "https://guysmolsky.github.io/HtmlCssProjects/projects/project%202/",
@@ -25,7 +31,7 @@ export const projectsData = {
     {
       id: 3,
       title: "Project 3",
-      image: "/images/html project images/projectThreePhoto.png",
+      image: getImagePath("/images/html project images/projectThreePhoto.png"),
       technologies: ["HTML", "CSS"],
       liveUrl:
         "https://guysmolsky.github.io/HtmlCssProjects/projects/project%203/",
@@ -35,7 +41,7 @@ export const projectsData = {
     {
       id: 4,
       title: "Project 4",
-      image: "/images/html project images/projectFourPhoto.png",
+      image: getImagePath("/images/html project images/projectFourPhoto.png"),
       technologies: ["HTML", "CSS"],
       liveUrl:
         "https://guysmolsky.github.io/HtmlCssProjects/projects/project%204/",
@@ -45,7 +51,7 @@ export const projectsData = {
     {
       id: 5,
       title: "Project 5",
-      image: "/images/html project images/projectFivePhoto.png",
+      image: getImagePath("/images/html project images/projectFivePhoto.png"),
       technologies: ["HTML", "CSS"],
       liveUrl:
         "https://guysmolsky.github.io/HtmlCssProjects/projects/project%205/",
@@ -55,7 +61,7 @@ export const projectsData = {
     {
       id: 6,
       title: "Project 6",
-      image: "/images/html project images/projectSixPhoto.png",
+      image: getImagePath("/images/html project images/projectSixPhoto.png"),
       technologies: ["HTML", "CSS"],
       liveUrl:
         "https://guysmolsky.github.io/HtmlCssProjects/projects/project%206/",
@@ -70,7 +76,9 @@ export const projectsData = {
       title: "Tic Tac Toe Game",
       description:
         "An interactive Tic Tac Toe Game With An Option To Play Against The Computer.",
-      image: "/images/javascript project images/JSprojectOnePhoto.png",
+      image: getImagePath(
+        "/images/javascript project images/JSprojectOnePhoto.png"
+      ),
       technologies: ["HTML", "CSS", "JavaScript"],
       liveUrl: "https://guysmolsky.github.io/TicTacToe/",
       githubUrl: "https://github.com/GuySmolsky/TicTacToe",
@@ -80,7 +88,9 @@ export const projectsData = {
       id: 8,
       title: "Sudoko Game",
       description: "A Really Nice And Neat Sudoko Game For All Levels.",
-      image: "/images/javascript project images/JSprojectTwoPhoto.png",
+      image: getImagePath(
+        "/images/javascript project images/JSprojectTwoPhoto.png"
+      ),
       technologies: ["HTML", "CSS", "JavaScript"],
       liveUrl: "https://guysmolsky.github.io/Suduko/",
       githubUrl: "https://github.com/GuySmolsky/Suduko",
@@ -90,7 +100,9 @@ export const projectsData = {
       id: 9,
       title: "Memory Game",
       description: "A dynamic Memory Game To Check Your Memory Skills",
-      image: "/images/javascript project images/JSprojectThreePhoto.png",
+      image: getImagePath(
+        "/images/javascript project images/JSprojectThreePhoto.png"
+      ),
       technologies: ["HTML", "CSS", "JavaScript"],
       liveUrl: "https://guysmolsky.github.io/Memory-Game/",
       githubUrl: "https://github.com/GuySmolsky/Memory-Game",
@@ -100,7 +112,9 @@ export const projectsData = {
       id: 10,
       title: "Minesweeper",
       description: "Really Cool Mine Sweepr Game For All levels",
-      image: "/images/javascript project images/JSprojectFourPhoto.png",
+      image: getImagePath(
+        "/images/javascript project images/JSprojectFourPhoto.png"
+      ),
       technologies: ["HTML", "CSS", "JavaScript"],
       liveUrl: "https://guysmolsky.github.io/Minesweeper/",
       githubUrl: "https://github.com/GuySmolsky/Minesweeper",
@@ -110,7 +124,9 @@ export const projectsData = {
       id: 11,
       title: "Chess Game",
       description: "A Classic Chess Game VS 2nd Player",
-      image: "/images/javascript project images/JSprojectFivePhoto.png",
+      image: getImagePath(
+        "/images/javascript project images/JSprojectFivePhoto.png"
+      ),
       technologies: ["HTML", "CSS", "JavaScript"],
       liveUrl: "https://guysmolsky.github.io/Chess/",
       githubUrl: "https://github.com/GuySmolsky/Chess",
@@ -120,7 +136,9 @@ export const projectsData = {
       id: 12,
       title: "Interactive Calender",
       description: "Advanced Interactive Calender With Daily Task Management",
-      image: "/images/javascript project images/JSprojectSixPhoto.png",
+      image: getImagePath(
+        "/images/javascript project images/JSprojectSixPhoto.png"
+      ),
       technologies: ["HTML", "CSS", "JavaScript"],
       liveUrl: "https://guysmolsky.github.io/Calendar/",
       githubUrl: "https://github.com/GuySmolsky/Calendar",
@@ -133,7 +151,9 @@ export const projectsData = {
       id: 13,
       title: "BizzCards",
       description: "",
-      image: "/images/react project images/BizCardsProjectImage.png",
+      image: getImagePath(
+        "/images/react project images/BizCardsProjectImage.png"
+      ),
       technologies: ["React", "MUI", "JavaScript", "Vite"],
       liveUrl: "",
       githubUrl: "",
@@ -147,7 +167,7 @@ export const projectsData = {
       title: "REST API Server",
       description:
         "Full-featured REST API with authentication, CRUD operations, and database integration.",
-      image: "/images/projects/nodejs/api-server.jpg",
+      image: getImagePath("/images/projects/nodejs/api-server.jpg"),
       technologies: ["Node.js", "Express", "MongoDB", "JWT", "joi", "and more"],
       liveUrl: null, // Backend APIs don't have live URLs typically
       githubUrl: "https://github.com/GuySmolsky/NodeJSProject",
@@ -162,7 +182,7 @@ export const projectsData = {
       title: "Data Analysis Tool",
       description:
         "Python-based data analysis and visualization tool with pandas and matplotlib.",
-      image: "/images/projects/python/data-analysis.jpg",
+      image: getImagePath("/images/projects/python/data-analysis.jpg"),
       technologies: ["Python", "Pandas", "Matplotlib", "NumPy"],
       liveUrl: null,
       githubUrl: null,
@@ -173,7 +193,7 @@ export const projectsData = {
       title: "Web Scraper",
       description:
         "Automated web scraping tool for data collection and processing.",
-      image: "/images/projects/python/web-scraper.jpg",
+      image: getImagePath("/images/projects/python/web-scraper.jpg"),
       technologies: ["Python", "BeautifulSoup", "Requests", "CSV"],
       liveUrl: null,
       githubUrl: null,
@@ -187,37 +207,11 @@ export const projectsData = {
       title: "E-commerce Platform",
       description:
         "Full-stack e-commerce application with payment integration and admin dashboard.",
-      image: "/images/projects/fullstack/ecommerce.jpg",
+      image: getImagePath("/images/projects/fullstack/ecommerce.jpg"),
       technologies: ["React", "Node.js", "MongoDB", "Stripe"],
       liveUrl: null,
       githubUrl: null,
       status: "coming-soon",
     },
   ],
-};
-
-// Helper function to get all projects
-export const getAllProjects = () => {
-  return Object.values(projectsData).flat();
-};
-
-// Helper function to get projects by category
-export const getProjectsByCategory = (category) => {
-  return projectsData[category] || [];
-};
-
-// Helper function to get project counts
-export const getProjectCounts = () => {
-  return {
-    htmlcss: projectsData.htmlcss.length,
-    javascript: projectsData.javascript.length,
-    react: projectsData.react.length,
-    nodejs: projectsData.nodejs.length,
-    python: projectsData.python.length,
-    fullstack: projectsData.fullstack.length,
-    total: getAllProjects().length,
-    completed: getAllProjects().filter((p) => p.status === "completed").length,
-    comingSoon: getAllProjects().filter((p) => p.status === "coming-soon")
-      .length,
-  };
 };
