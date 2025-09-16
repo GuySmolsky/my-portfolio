@@ -215,3 +215,29 @@ export const projectsData = {
     },
   ],
 };
+
+// Helper function to get all projects
+export const getAllProjects = () => {
+  return Object.values(projectsData).flat();
+};
+
+// Helper function to get projects by category
+export const getProjectsByCategory = (category) => {
+  return projectsData[category] || [];
+};
+
+// Helper function to get project counts
+export const getProjectCounts = () => {
+  return {
+    htmlcss: projectsData.htmlcss.length,
+    javascript: projectsData.javascript.length,
+    react: projectsData.react.length,
+    nodejs: projectsData.nodejs.length,
+    python: projectsData.python.length,
+    fullstack: projectsData.fullstack.length,
+    total: getAllProjects().length,
+    completed: getAllProjects().filter((p) => p.status === "completed").length,
+    comingSoon: getAllProjects().filter((p) => p.status === "coming-soon")
+      .length,
+  };
+};
