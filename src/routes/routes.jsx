@@ -38,19 +38,15 @@ const Home = () => {
       <h1
         style={{
           fontFamily: "'Orbitron', monospace",
+          color: colors.primary,
           fontSize: "3rem",
           marginBottom: "1rem",
-          // Key fix: ensure the gradient only applies to text, not background
-          background: colors.gradient,
-          WebkitBackgroundClip: "text",
-          WebkitTextFillColor: "transparent",
-          backgroundClip: "text",
-          // Important fallback for theme transitions
-          color: colors.primary,
-          transition: "background 0.3s ease",
-          // Ensure the element doesn't create a background box
-          display: "inline-block",
-          lineHeight: "1.1",
+          transition: "color 0.3s ease",
+          // Add a nice effect without problematic gradients
+          textShadow: isDark
+            ? `0 0 30px ${colors.primary}80, 0 0 60px ${colors.secondary}40`
+            : `0 2px 10px ${colors.primary}40`,
+          fontWeight: "700",
         }}
       >
         Welcome to My Portfolio
