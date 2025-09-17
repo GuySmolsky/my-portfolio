@@ -155,8 +155,8 @@ export const projectsData = {
         "/images/react project images/BizCardsProjectImage.png"
       ),
       technologies: ["React", "MUI", "JavaScript", "Vite"],
-      liveUrl: "",
-      githubUrl: "",
+      liveUrl: "https://guysmolsky.github.io/BizzCards/",
+      githubUrl: "https://github.com/GuySmolsky/BizzCards",
       status: "completed",
     },
   ],
