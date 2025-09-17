@@ -12,6 +12,12 @@ import {
 import { Code, School, Work, Person, Close } from "@mui/icons-material";
 import { useThemeToggle } from "../context/ThemeContext";
 
+// Helper function to get correct image paths for both development and production
+const getImagePath = (imagePath) => {
+  const basePath = import.meta.env.DEV ? "" : "/my-portfolio";
+  return `${basePath}${imagePath}`;
+};
+
 const About = () => {
   const [selectedTimelineItem, setSelectedTimelineItem] = useState(null);
   const { isDark } = useThemeToggle();
@@ -113,7 +119,7 @@ const About = () => {
               border: `3px solid ${colors.primary}`,
               boxShadow: `0 0 20px ${colors.primary}80`,
             }}
-            src="/images/other%20images/ProfileImage.jpg"
+            src={getImagePath("/images/other images/ProfileImage.jpg")}
             alt="Guy Smolsky"
           >
             GS

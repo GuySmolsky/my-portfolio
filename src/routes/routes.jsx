@@ -38,12 +38,17 @@ const Home = () => {
       <h1
         style={{
           fontFamily: "'Orbitron', monospace",
+          fontSize: "3rem",
+          marginBottom: "1rem",
+          // Use solid color as base, then apply gradient
+          color: colors.primary,
           background: colors.gradient,
           backgroundClip: "text",
           WebkitBackgroundClip: "text",
-          color: "transparent",
-          fontSize: "3rem",
-          marginBottom: "1rem",
+          WebkitTextFillColor: "transparent",
+          transition: "all 0.3s ease",
+          // Ensure text is always visible as fallback
+          position: "relative",
         }}
       >
         Welcome to My Portfolio
@@ -53,6 +58,7 @@ const Home = () => {
           color: colors.textSecondary,
           fontSize: "1.2rem",
           fontFamily: "'Inter', sans-serif",
+          transition: "color 0.3s ease",
         }}
       >
         Explore my projects and skills
