@@ -23,6 +23,23 @@ const Home = () => {
       : "linear-gradient(45deg, #0066cc, #6f42c1)",
   };
 
+  // Alternative approach - use CSS-in-JS with better fallbacks
+  const headingStyle = {
+    fontFamily: "'Orbitron', monospace",
+    fontSize: "3rem",
+    marginBottom: "1rem",
+    transition: "all 0.3s ease",
+    // First set a solid color that will always be visible
+    color: colors.primary,
+    // Then try to apply gradient if supported
+    ...(CSS.supports("background-clip", "text") && {
+      background: colors.gradient,
+      backgroundClip: "text",
+      WebkitBackgroundClip: "text",
+      color: "transparent",
+    }),
+  };
+
   return (
     <div
       style={{
@@ -35,24 +52,7 @@ const Home = () => {
         flexDirection: "column",
       }}
     >
-      <h1
-        style={{
-          fontFamily: "'Orbitron', monospace",
-          fontSize: "3rem",
-          marginBottom: "1rem",
-          // Use solid color as base, then apply gradient
-          color: colors.primary,
-          background: colors.gradient,
-          backgroundClip: "text",
-          WebkitBackgroundClip: "text",
-          WebkitTextFillColor: "transparent",
-          transition: "all 0.3s ease",
-          // Ensure text is always visible as fallback
-          position: "relative",
-        }}
-      >
-        Welcome to My Portfolio
-      </h1>
+      <h1 style={headingStyle}>Welcome to My Portfolio</h1>
       <p
         style={{
           color: colors.textSecondary,
