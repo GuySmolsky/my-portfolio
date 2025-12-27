@@ -38,7 +38,7 @@ const About = () => {
   };
 
   const skills = {
-    current: [
+    Stack: [
       "HTML",
       "CSS",
       "JavaScript",
@@ -49,9 +49,10 @@ const About = () => {
       "Git",
       "VS Code",
       "TypeScript",
+      "MySQL",
+      "Python",
+      "Django",
     ],
-    learning: ["Python", "MySQL", "Docker"],
-    future: ["AWS", "DevOps", "GraphQL", "Next.js"],
   };
 
   const timeline = [
@@ -86,14 +87,11 @@ const About = () => {
       date: "Current",
     },
     {
-      title: "Course Completion",
+      title: "Job Seeking",
       description:
-        "Finishing HackerU program and transitioning to professional development career",
-      fullDescription:
-        "In just 3.5 months, I will complete the HackerU program, marking a major milestone in my transition to a professional development career. This completion represents mastery of full-stack web development, from frontend frameworks like React to backend technologies including Node.js, Express, and database management with MongoDB. The program's intensive nature has prepared me not just technically, but also professionally - teaching me industry best practices, collaborative development workflows, and the problem-solving mindset essential for success in tech roles. Upon completion, I'll be ready to contribute meaningfully to development teams, bringing fresh perspectives, strong foundational knowledge, and the enthusiasm of someone passionate about creating innovative web solutions. This transition marks the beginning of what I envision as a long and fulfilling career in web development.",
+        "Finished HackerU program and transitioning to professional development career",
       icon: <Person />,
       color: isDark ? "#ff00ff" : "#6f42c1",
-      date: "3.5 Months",
     },
   ];
 
