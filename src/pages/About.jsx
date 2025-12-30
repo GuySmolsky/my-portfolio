@@ -38,7 +38,7 @@ const About = () => {
   };
 
   const skills = {
-    Stack: [
+    stack: [
       "HTML",
       "CSS",
       "JavaScript",
@@ -90,8 +90,11 @@ const About = () => {
       title: "Job Seeking",
       description:
         "Finished HackerU program and transitioning to professional development career",
+      fullDescription:
+        "Having successfully completed the HackerU full-stack development program, I am now actively seeking my first professional role in the tech industry. Armed with a comprehensive skill set spanning frontend technologies like React and modern CSS, backend development with Node.js and Express, and database management with MongoDB and MySQL, I am ready to contribute to a dynamic development team. I am particularly interested in positions that will allow me to continue growing as a developer while making meaningful contributions to real-world projects. Whether it's a junior full-stack position, frontend role, or backend opportunity, I bring enthusiasm, a strong work ethic, and a genuine passion for clean, efficient code. I am eager to learn from experienced developers, take on challenging projects, and prove my value as a dedicated team member committed to delivering high-quality solutions.",
       icon: <Person />,
       color: isDark ? "#ff00ff" : "#6f42c1",
+      date: "2025",
     },
   ];
 
@@ -303,11 +306,11 @@ const About = () => {
                 flex: 1,
                 display: "flex",
                 flexDirection: "column",
-                justifyContent: "space-around",
+                justifyContent: "center",
                 py: 2,
               }}
             >
-              {/* Current Skills */}
+              {/* Stack */}
               <Box sx={{ textAlign: "center" }}>
                 <Typography
                   variant="h6"
@@ -318,7 +321,7 @@ const About = () => {
                     fontSize: "1rem",
                   }}
                 >
-                  Current Skills
+                  My Stack
                 </Typography>
                 <Box
                   sx={{
@@ -328,7 +331,7 @@ const About = () => {
                     justifyContent: "center",
                   }}
                 >
-                  {skills.current.map((skill) => (
+                  {skills.stack.map((skill) => (
                     <Chip
                       key={skill}
                       label={skill}
@@ -340,90 +343,6 @@ const About = () => {
                         border: isDark
                           ? "1px solid rgba(0, 255, 0, 0.3)"
                           : "1px solid rgba(40, 167, 69, 0.3)",
-                        fontFamily: "'Inter', sans-serif",
-                        fontSize: "0.75rem",
-                        height: "28px",
-                      }}
-                    />
-                  ))}
-                </Box>
-              </Box>
-
-              {/* Learning */}
-              <Box sx={{ textAlign: "center" }}>
-                <Typography
-                  variant="h6"
-                  sx={{
-                    color: isDark ? "#ff9800" : "#fd7e14",
-                    fontFamily: "'Orbitron', monospace",
-                    mb: 2,
-                    fontSize: "1rem",
-                  }}
-                >
-                  Currently Learning
-                </Typography>
-                <Box
-                  sx={{
-                    display: "flex",
-                    flexWrap: "wrap",
-                    gap: 1,
-                    justifyContent: "center",
-                  }}
-                >
-                  {skills.learning.map((skill) => (
-                    <Chip
-                      key={skill}
-                      label={skill}
-                      sx={{
-                        backgroundColor: isDark
-                          ? "rgba(255, 152, 0, 0.1)"
-                          : "rgba(253, 126, 20, 0.1)",
-                        color: isDark ? "#ff9800" : "#fd7e14",
-                        border: isDark
-                          ? "1px solid rgba(255, 152, 0, 0.3)"
-                          : "1px solid rgba(253, 126, 20, 0.3)",
-                        fontFamily: "'Inter', sans-serif",
-                        fontSize: "0.75rem",
-                        height: "28px",
-                      }}
-                    />
-                  ))}
-                </Box>
-              </Box>
-
-              {/* Future Plans */}
-              <Box sx={{ textAlign: "center" }}>
-                <Typography
-                  variant="h6"
-                  sx={{
-                    color: colors.secondary,
-                    fontFamily: "'Orbitron', monospace",
-                    mb: 2,
-                    fontSize: "1rem",
-                  }}
-                >
-                  Future Plans
-                </Typography>
-                <Box
-                  sx={{
-                    display: "flex",
-                    flexWrap: "wrap",
-                    gap: 1,
-                    justifyContent: "center",
-                  }}
-                >
-                  {skills.future.map((skill) => (
-                    <Chip
-                      key={skill}
-                      label={skill}
-                      sx={{
-                        backgroundColor: isDark
-                          ? "rgba(255, 0, 255, 0.1)"
-                          : "rgba(111, 66, 193, 0.1)",
-                        color: colors.secondary,
-                        border: isDark
-                          ? "1px solid rgba(255, 0, 255, 0.3)"
-                          : "1px solid rgba(111, 66, 193, 0.3)",
                         fontFamily: "'Inter', sans-serif",
                         fontSize: "0.75rem",
                         height: "28px",

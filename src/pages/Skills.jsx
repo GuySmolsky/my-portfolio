@@ -49,7 +49,7 @@ const Skills = () => {
       skills: [
         { name: "Node.js", level: 100, color: "#68a063" },
         { name: "MongoDB", level: 100, color: "#47a248" },
-        { name: "MySQL", level: 10, color: "#00758f" },
+        { name: "MySQL", level: 100, color: "#00758f" },
         { name: "Express", level: 100, color: "#68a063" },
       ],
     },
@@ -69,10 +69,8 @@ const Skills = () => {
       icon: <TrendingUp />,
       color: colors.secondary,
       skills: [
-        { name: "Python", level: 10, color: "#ffd43b" },
-        { name: "TypeScript", level: 10, color: "#3178c6" },
-        { name: "Docker", level: 10, color: "#0db7ed" },
-        { name: "AWS", level: 10, color: "#ff9900" },
+        { name: "Python", level: 100, color: "#ffd43b" },
+        { name: "TypeScript", level: 100, color: "#3178c6" },
       ],
     },
   ];
