@@ -94,7 +94,7 @@ const About = () => {
         "Having successfully completed the HackerU full-stack development program, I am now actively seeking my first professional role in the tech industry. Armed with a comprehensive skill set spanning frontend technologies like React and modern CSS, backend development with Node.js and Express, and database management with MongoDB and MySQL, I am ready to contribute to a dynamic development team. I am particularly interested in positions that will allow me to continue growing as a developer while making meaningful contributions to real-world projects. Whether it's a junior full-stack position, frontend role, or backend opportunity, I bring enthusiasm, a strong work ethic, and a genuine passion for clean, efficient code. I am eager to learn from experienced developers, take on challenging projects, and prove my value as a dedicated team member committed to delivering high-quality solutions.",
       icon: <Person />,
       color: isDark ? "#ff00ff" : "#6f42c1",
-      date: "2025",
+      date: "2026",
     },
   ];
 
