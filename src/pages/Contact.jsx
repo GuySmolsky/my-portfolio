@@ -8,7 +8,7 @@ import {
   Snackbar,
   Alert,
 } from "@mui/material";
-import { Email, LinkedIn, GitHub, LocationOn } from "@mui/icons-material";
+import { Email, LinkedIn, GitHub, Download } from "@mui/icons-material";
 import { useThemeToggle } from "../context/ThemeContext";
 
 const Contact = () => {
@@ -56,13 +56,25 @@ const Contact = () => {
       color: colors.text,
     },
     {
-      icon: <LocationOn />,
-      label: "Location",
-      value: "Ramat Gan, Tel Aviv, Israel",
-      link: null,
+      icon: <Download />,
+      label: "Resume",
+      value: "Download my CV",
+      link: `${import.meta.env.BASE_URL}cv/Guy smolski.pdf`,
       color: isDark ? "#ff9800" : "#fd7e14",
+      download: true,
     },
   ];
+
+  const handleContactClick = (contact) => {
+    if (contact.download) {
+      const link = document.createElement("a");
+      link.href = contact.link;
+      link.download = "Guy_Smolsky_CV.pdf";
+      link.click();
+    } else if (contact.link) {
+      window.open(contact.link, "_blank");
+    }
+  };
 
   return (
     <Container maxWidth="xl">
@@ -153,9 +165,7 @@ const Contact = () => {
                       }
                     : {},
                 }}
-                onClick={() =>
-                  contact.link && window.open(contact.link, "_blank")
-                }
+                onClick={() => handleContactClick(contact)}
               >
                 <IconButton
                   sx={{
