@@ -167,7 +167,7 @@ export const projectsData = {
       title: "REST API Server",
       description:
         "Full-featured REST API with authentication, CRUD operations, and database integration.",
-      image: getImagePath("/images/projects/nodejs/api-server.jpg"),
+      image: getImagePath("/images/other images/Serversideimage.png"),
       technologies: ["Node.js", "Express", "MongoDB", "JWT", "joi", "and more"],
       liveUrl: null, // Backend APIs don't have live URLs typically
       githubUrl: "https://github.com/GuySmolsky/NodeJSProject",
@@ -182,7 +182,7 @@ export const projectsData = {
       title: "Data Analysis Tool",
       description:
         "Python-based data analysis and visualization tool with pandas and matplotlib.",
-      image: getImagePath("/images/projects/python/data-analysis.jpg"),
+      image: getImagePath("/images/other images/Serversideimage.png"),
       technologies: ["Python", "Pandas", "Matplotlib", "NumPy"],
       liveUrl: null,
       githubUrl: null,
@@ -193,7 +193,7 @@ export const projectsData = {
       title: "Web Scraper",
       description:
         "Automated web scraping tool for data collection and processing.",
-      image: getImagePath("/images/projects/python/web-scraper.jpg"),
+      image: getImagePath("/images/other images/Serversideimage.png"),
       technologies: ["Python", "BeautifulSoup", "Requests", "CSV"],
       liveUrl: null,
       githubUrl: null,
@@ -207,7 +207,7 @@ export const projectsData = {
       title: "E-commerce Platform",
       description:
         "Full-stack e-commerce application with payment integration and admin dashboard.",
-      image: getImagePath("/images/projects/fullstack/ecommerce.jpg"),
+      image: getImagePath("/images/other images/Serversideimage.png"),
       technologies: ["React", "Node.js", "MongoDB", "Stripe"],
       liveUrl: null,
       githubUrl: null,
