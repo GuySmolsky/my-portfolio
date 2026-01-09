@@ -39,6 +39,7 @@ const Skills = () => {
         { name: "HTML", level: 100, color: "#e34c26" },
         { name: "CSS", level: 100, color: "#1572b6" },
         { name: "JavaScript", level: 100, color: "#f0db4f" },
+        { name: "TypeScript", level: 100, color: "#3178c6" },
         { name: "React", level: 100, color: "#61dafb" },
       ],
     },
@@ -48,9 +49,11 @@ const Skills = () => {
       color: isDark ? "#ff9800" : "#fd7e14",
       skills: [
         { name: "Node.js", level: 100, color: "#68a063" },
+        { name: "Express", level: 100, color: "#68a063" },
+        { name: "Python", level: 100, color: "#ffd43b" },
+        { name: "Django", level: 100, color: "#092e20" },
         { name: "MongoDB", level: 100, color: "#47a248" },
         { name: "MySQL", level: 100, color: "#00758f" },
-        { name: "Express", level: 100, color: "#68a063" },
       ],
     },
     {
@@ -69,44 +72,11 @@ const Skills = () => {
       icon: <TrendingUp />,
       color: colors.secondary,
       skills: [
-        { name: "Python", level: 100, color: "#ffd43b" },
-        { name: "TypeScript", level: 100, color: "#3178c6" },
+        { name: "Angular", level: 30, color: "#dd0031" },
+        { name: "Vue.js", level: 30, color: "#4fc08d" },
+        { name: "Docker", level: 30, color: "#2496ed" },
+        { name: "AWS", level: 30, color: "#ff9900" },
       ],
-    },
-  ];
-
-  // Learning goals - simple data
-  const learningGoals = [
-    {
-      title: "Master React",
-      description:
-        "Advanced hooks, state management, and component architecture",
-      color: "#61dafb",
-      borderColor: "rgba(97, 218, 251, 0.3)",
-      background: "rgba(97, 218, 251, 0.1)",
-    },
-    {
-      title: "Full-Stack",
-      description: "Node.js, Express, and database integration",
-      color: "#68a063",
-      borderColor: "rgba(104, 160, 99, 0.3)",
-      background: "rgba(104, 160, 99, 0.1)",
-    },
-    {
-      title: "Python",
-      description: "Data analysis, automation, and backend development",
-      color: "#ffd43b",
-      borderColor: "rgba(255, 212, 59, 0.3)",
-      background: "rgba(255, 212, 59, 0.1)",
-    },
-    {
-      title: "DevOps",
-      description: "Docker, deployment, and cloud technologies",
-      color: colors.secondary,
-      borderColor: isDark
-        ? "rgba(255, 0, 255, 0.3)"
-        : "rgba(111, 66, 193, 0.3)",
-      background: isDark ? "rgba(255, 0, 255, 0.1)" : "rgba(111, 66, 193, 0.1)",
     },
   ];
 
@@ -166,47 +136,10 @@ const Skills = () => {
               gap: 2,
               mb: 4,
             }}
-          >
-            <Chip
-              label="6 HTML/CSS Projects"
-              sx={{
-                backgroundColor: "rgba(227, 76, 38, 0.1)",
-                color: "#e34c26",
-                border: "1px solid rgba(227, 76, 38, 0.3)",
-                fontFamily: "'Orbitron', monospace",
-              }}
-            />
-            <Chip
-              label="6 JavaScript Projects"
-              sx={{
-                backgroundColor: "rgba(240, 219, 79, 0.1)",
-                color: "#f0db4f",
-                border: "1px solid rgba(240, 219, 79, 0.3)",
-                fontFamily: "'Orbitron', monospace",
-              }}
-            />
-            <Chip
-              label="1 React Project"
-              sx={{
-                backgroundColor: "rgba(97, 218, 251, 0.1)",
-                color: "#61dafb",
-                border: "1px solid rgba(97, 218, 251, 0.3)",
-                fontFamily: "'Orbitron', monospace",
-              }}
-            />
-            <Chip
-              label="1 Node.js Project"
-              sx={{
-                backgroundColor: "rgba(104, 160, 99, 0.1)",
-                color: "#68a063",
-                border: "1px solid rgba(104, 160, 99, 0.3)",
-                fontFamily: "'Orbitron', monospace",
-              }}
-            />
-          </Box>
+          ></Box>
         </Box>
 
-        {/* Skills Categories - Fixed Grid Layout */}
+        {/* Skills Categories */}
         <Box
           sx={{
             display: "grid",
@@ -216,7 +149,6 @@ const Skills = () => {
               lg: "repeat(2, 1fr)",
             },
             gap: 4,
-            mb: 8,
             "& > *": {
               minHeight: "450px",
             },
@@ -344,86 +276,6 @@ const Skills = () => {
               </Box>
             </Paper>
           ))}
-        </Box>
-
-        {/* Learning Goals Section - Simple Static Cards */}
-        <Box sx={{ mt: 8 }}>
-          <Paper
-            elevation={0}
-            sx={{
-              p: 6,
-              background: colors.cardBg,
-              border: `1px solid ${colors.border}`,
-              borderRadius: "20px",
-              textAlign: "center",
-            }}
-          >
-            <Typography
-              variant="h4"
-              sx={{
-                fontFamily: "'Orbitron', monospace",
-                color: colors.primary,
-                mb: 3,
-              }}
-            >
-              2025 Learning Goals
-            </Typography>
-
-            <Box
-              sx={{
-                display: "grid",
-                gridTemplateColumns: {
-                  xs: "1fr",
-                  sm: "repeat(2, 1fr)",
-                  md: "repeat(4, 1fr)",
-                },
-                gap: 3,
-                px: 2,
-                py: 2,
-              }}
-            >
-              {learningGoals.map((goal, index) => (
-                <Paper
-                  key={index}
-                  elevation={0}
-                  sx={{
-                    p: 3,
-                    border: `1px solid ${goal.borderColor}`,
-                    borderRadius: "15px",
-                    background: goal.background,
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    minHeight: "180px",
-                  }}
-                >
-                  <Typography
-                    variant="h6"
-                    sx={{
-                      color: goal.color,
-                      fontFamily: "'Orbitron', monospace",
-                      mb: 2,
-                      fontWeight: 600,
-                      textAlign: "center",
-                    }}
-                  >
-                    {goal.title}
-                  </Typography>
-                  <Typography
-                    sx={{
-                      color: colors.textSecondary,
-                      fontSize: "0.9rem",
-                      textAlign: "center",
-                      lineHeight: 1.4,
-                    }}
-                  >
-                    {goal.description}
-                  </Typography>
-                </Paper>
-              ))}
-            </Box>
-          </Paper>
         </Box>
       </Box>
     </Container>
