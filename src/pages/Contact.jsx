@@ -59,7 +59,7 @@ const Contact = () => {
       icon: <Download />,
       label: "Resume",
       value: "Download my CV",
-      link: `${import.meta.env.BASE_URL}cv/Guy smolski.pdf`,
+      link: `${import.meta.env.BASE_URL}cv/Guy smolski CV.pdf`,
       color: isDark ? "#ff9800" : "#fd7e14",
       download: true,
     },
@@ -332,7 +332,7 @@ const Contact = () => {
                 onClick={() =>
                   window.open(
                     "https://www.linkedin.com/in/guy-smolsky-550445341/",
-                    "_blank"
+                    "_blank",
                   )
                 }
                 sx={{
